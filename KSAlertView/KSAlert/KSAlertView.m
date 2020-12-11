@@ -1,9 +1,12 @@
 //
 //  KSAlertView.m
-//  demo
+//  KSAlertView
+//  https://github.com/Turboks/KSAlertView
 //
-//  Created by 爱尚家 on 2020/12/9.
 //
+//  Created by Turboks on 2020/12/9.
+//
+
 #define SCREEBRECT          [UIScreen mainScreen].bounds
 #define WINDOW              [[[UIApplication sharedApplication] windows] lastObject]
 #define DEVWIDTH            [UIScreen mainScreen].bounds.size.width

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "KSAlertView"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "仿系统样式AlertView、支持单选、多选、图片弹框等"
   spec.description  = <<-DESC
                       多种样式的AlertView
@@ -10,5 +10,5 @@ Pod::Spec.new do |spec|
   spec.author             = { "Turboks" => "turboks@163.com" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/Turboks/KSAlertView.git", :tag => "#{spec.version}" }
-  spec.source_files  = "KSAlertView/*.{h}"
+  spec.source_files  = "KSAlertView/KSAlert/*.{h}"
 end

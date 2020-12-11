@@ -1,8 +1,10 @@
 //
 //  KSAlertView.h
-//  demo
+//  KSAlertView
+//  https://github.com/Turboks/KSAlertView
 //
-//  Created by 爱尚家 on 2020/12/9.
+//
+//  Created by Turboks on 2020/12/9.
 //
 
 #import <UIKit/UIKit.h>
