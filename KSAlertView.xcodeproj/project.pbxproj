@@ -69,14 +69,13 @@
 		1103FC242581F5F60060C644 /* KSAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				11CDE17125836D8D00FBF4EF /* KSAlert */,
 				1103FC252581F5F60060C644 /* AppDelegate.h */,
 				1103FC262581F5F60060C644 /* AppDelegate.m */,
 				1103FC282581F5F60060C644 /* SceneDelegate.h */,
 				1103FC292581F5F60060C644 /* SceneDelegate.m */,
 				1103FC2B2581F5F60060C644 /* ViewController.h */,
 				1103FC2C2581F5F60060C644 /* ViewController.m */,
-				1103FC41258213810060C644 /* KSAlertView.h */,
-				1103FC40258213800060C644 /* KSAlertView.m */,
 				1103FC42258213810060C644 /* UIImage+GIF.h */,
 				1103FC3F258213800060C644 /* UIImage+GIF.m */,
 				1103FC46258213DD0060C644 /* loading.gif */,
@@ -87,6 +86,15 @@
 				1103FC372581F5F90060C644 /* main.m */,
 			);
 			path = KSAlertView;
+			sourceTree = "<group>";
+		};
+		11CDE17125836D8D00FBF4EF /* KSAlert */ = {
+			isa = PBXGroup;
+			children = (
+				1103FC41258213810060C644 /* KSAlertView.h */,
+				1103FC40258213800060C644 /* KSAlertView.m */,
+			);
+			path = KSAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
