@@ -14,9 +14,9 @@
 		1103FC322581F5F90060C644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1103FC312581F5F90060C644 /* Assets.xcassets */; };
 		1103FC352581F5F90060C644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1103FC332581F5F90060C644 /* LaunchScreen.storyboard */; };
 		1103FC382581F5F90060C644 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1103FC372581F5F90060C644 /* main.m */; };
-		1103FC43258213810060C644 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1103FC3F258213800060C644 /* UIImage+GIF.m */; };
 		1103FC44258213810060C644 /* KSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1103FC40258213800060C644 /* KSAlertView.m */; };
 		1103FC47258213DD0060C644 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1103FC46258213DD0060C644 /* loading.gif */; };
+		11CDE18525839FEB00FBF4EF /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1103FC3F258213800060C644 /* UIImage+GIF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,10 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CDE18525839FEB00FBF4EF /* UIImage+GIF.m in Sources */,
 				1103FC2D2581F5F60060C644 /* ViewController.m in Sources */,
 				1103FC272581F5F60060C644 /* AppDelegate.m in Sources */,
 				1103FC382581F5F90060C644 /* main.m in Sources */,
-				1103FC43258213810060C644 /* UIImage+GIF.m in Sources */,
 				1103FC2A2581F5F60060C644 /* SceneDelegate.m in Sources */,
 				1103FC44258213810060C644 /* KSAlertView.m in Sources */,
 			);
