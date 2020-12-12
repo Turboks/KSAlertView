@@ -76,8 +76,6 @@
 				1103FC292581F5F60060C644 /* SceneDelegate.m */,
 				1103FC2B2581F5F60060C644 /* ViewController.h */,
 				1103FC2C2581F5F60060C644 /* ViewController.m */,
-				11CDE18A2583A5E800FBF4EF /* UIImage+GIF.h */,
-				11CDE18B2583A5E900FBF4EF /* UIImage+GIF.m */,
 				1103FC46258213DD0060C644 /* loading.gif */,
 				1103FC2E2581F5F60060C644 /* Main.storyboard */,
 				1103FC312581F5F90060C644 /* Assets.xcassets */,
@@ -93,6 +91,8 @@
 			children = (
 				1103FC41258213810060C644 /* KSAlertView.h */,
 				1103FC40258213800060C644 /* KSAlertView.m */,
+				11CDE18A2583A5E800FBF4EF /* UIImage+GIF.h */,
+				11CDE18B2583A5E900FBF4EF /* UIImage+GIF.m */,
 			);
 			path = KSAlert;
 			sourceTree = "<group>";

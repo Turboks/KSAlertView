@@ -1,9 +1,10 @@
 //
-//  UIImage+GIF.m
-//  iOSPLS
+//  UIImage+GIF.h
+//  KSAlertView
+//  https://github.com/Turboks/KSAlertView
 //
-//  Created by 爱尚家 on 2018/4/19.
-//  Copyright © 2018年 Mr_Kong. All rights reserved.
+//
+//  Created by Turboks on 2020/12/9.
 //
 
 #import "UIImage+GIF.h"
