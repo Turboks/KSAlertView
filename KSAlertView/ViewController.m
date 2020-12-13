@@ -49,72 +49,59 @@
     switch (indexPath.row) {
         case 0:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithTitle:@"Title" message:@"Message" otherBtnTitle:@"other" clickIndexBlock:^(NSInteger index) {
-                
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithTitle:@"Title" message:@"Message" otherBtnTitle:@"other" clickIndexBlock:^(NSInteger index) {
+            }]show];
         }
             break;
         case 1:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithTitle:@"Title" message:@"Message" cancelBtnTitle:@"cancel" otherBtnTitle:@"other" clickIndexBlock:^(NSInteger index) {
-                
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithTitle:@"Title" message:@"Message" cancelBtnTitle:@"cancel" otherBtnTitle:@"other" clickIndexBlock:^(NSInteger index) {
+            }]show];
         }
             break;
         case 2:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithImageUrl:[NSURL URLWithString:@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1819216937,2118754409&fm=26&gp=0.jpg"] closeBtn:[UIImage imageNamed:@"close"] clickImageBlock:^{
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithImageUrl:[NSURL URLWithString:@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1819216937,2118754409&fm=26&gp=0.jpg"] closeBtn:[UIImage imageNamed:@"close"] clickImageBlock:^{
+            }]show];
         }
             break;
         case 3:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithImage:[UIImage imageNamed:@"logo"] closeBtn:[UIImage imageNamed:@"close"] clickImageBlock:^{
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithImage:[UIImage imageNamed:@"logo"] closeBtn:[UIImage imageNamed:@"close"] clickImageBlock:^{
+            }]show];
         }
             break;
             
             
         case 4:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"] closeBtn:[UIImage imageNamed:@"close"]];
-            [ks show];
+            [[[KSAlertView alloc] initWithURL:[NSURL URLWithString:@"https://www.baidu.com"] closeBtn:[UIImage imageNamed:@"close"]]show];
         }
             break;
             
         case 5:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithGif:@"loading" endBlock:^{
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithGif:@"loading" endBlock:^{
+            }]show];
         }
             break;
         case 6:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithText:@"loading..." showTime:1.0 endBlock:^{
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithText:@"111" showTime:1.0 endBlock:^{
+            }]show];
         }
             break;
             
         case 7:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithArratList:[NSMutableArray arrayWithObjects:@"111",@"222",@"333",@"444",@"555",nil] cancelBtn:@"取消" otherBtn:@"确定" clickBlock:^(NSInteger index) {
-                NSLog(@"选择了%ld",(long)index);
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithArratList:[NSMutableArray arrayWithObjects:@"111",@"222",@"333",@"444",@"555",nil] cancelBtn:@"取消" otherBtn:@"确定" clickBlock:^(NSInteger index) {
+            }]show];
         }
             break;
         case 8:
         {
-            KSAlertView * ks = [[KSAlertView alloc] initWithArratList:[NSMutableArray arrayWithObjects:@"111",@"222",@"333",@"444",@"555",nil] cancelBtn:@"取消" otherBtn:@"确定" clickArrBlock:^(NSMutableArray *arr) {
-                NSLog(@"%@",arr);
-            }];
-            [ks show];
+            [[[KSAlertView alloc] initWithArratList:[NSMutableArray arrayWithObjects:@"111",@"222",@"333",@"444",@"555",nil] cancelBtn:@"取消" otherBtn:@"确定" clickArrBlock:^(NSMutableArray *arr) {
+            }]show];
         }
             break;
         default:
