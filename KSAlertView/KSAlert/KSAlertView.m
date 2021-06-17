@@ -262,8 +262,7 @@
     }
     return self;
 }
-
-- (instancetype)initWithGif:(NSString *)gifImage endBlock:(KSAlertGifEndBlock)block{
+- (instancetype)initWithGif:(NSString *)gifImage andIsAutoHidden:(BOOL)isHidden{
     self = [super init];
     if (self) {
         
@@ -271,20 +270,20 @@
         self.backgroundColor = BackColor;
         
         UIImage * image = [UIImage imageWithGIFNamed:gifImage];
-        float timeInterval = image.duration;
-        
         self.gifimageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, GifWidth, GifHeight)];
         self.gifimageView.center = self.center;
         self.gifimageView.image = image;
         [self addSubview:self.gifimageView];
         
-        self.gifEndBlock = block;
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, timeInterval * NSEC_PER_SEC), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self gifEnd];
+        //自动隐藏GIF
+        if (isHidden) {
+            float timeInterval = image.duration;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, timeInterval * NSEC_PER_SEC), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self gifEnd];
+                });
             });
-        });
+        }
     }
     return self;
 }
@@ -441,9 +440,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cellalert"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cellalert"];
     }
     
     if (selImage == nil || unselImage == nil) {
@@ -508,9 +507,6 @@
 
 -(void)gifEnd{
     __weak typeof(self) weakSelf = self;
-    if (self.gifEndBlock) {
-        self.gifEndBlock();
-    }
     //移除当前视图
     [weakSelf diss];
 }

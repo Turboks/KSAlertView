@@ -36,7 +36,7 @@ typedef void(^KSAlertClickArrBlock)(NSMutableArray * arr);
 
 @property (nonatomic, copy) KSAlertClickImageBlock clickImageBlock; ///< 图片点击事件block
 
-@property (nonatomic, copy) KSAlertGifEndBlock gifEndBlock;         ///< gif和文字结束事件block
+@property (nonatomic, copy) KSAlertGifEndBlock gifEndBlock;         ///< gif和文字结束事件block、gif因为用不到暂时取消
 
 @property (nonatomic, copy) KSAlertClickArrBlock clickIndexArrBlock; ///< 列表多选事件block
 
@@ -74,9 +74,9 @@ typedef void(^KSAlertClickArrBlock)(NSMutableArray * arr);
 -(instancetype)initWithURL:(NSURL *)url closeBtn:(UIImage *)close;
 
 /// 单gif遮罩
-/// @param gifImage gif图片、显示时长为gif的循环时长
-/// @param block 结束block
--(instancetype)initWithGif:(NSString *)gifImage endBlock:(KSAlertGifEndBlock)block;
+/// @param gifImage gif图片名称
+/// @param isHidden 是否自动取消、自动取消时常为gif图片本身的动画时间
+-(instancetype)initWithGif:(NSString *)gifImage andIsAutoHidden:(BOOL)isHidden;
 
 /// 单文字遮罩
 /// @param showText 显示文本

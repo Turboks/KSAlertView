@@ -32,8 +32,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
@@ -53,25 +52,27 @@
             }]show];
         }
             break;
+            
         case 1:
         {
             [[[KSAlertView alloc] initWithTitle:@"Title" message:@"Message" cancelBtnTitle:@"cancel" otherBtnTitle:@"other" clickIndexBlock:^(NSInteger index) {
             }]show];
         }
             break;
+            
         case 2:
         {
             [[[KSAlertView alloc] initWithImageUrl:[NSURL URLWithString:@"https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1819216937,2118754409&fm=26&gp=0.jpg"] closeBtn:[UIImage imageNamed:@"close"] clickImageBlock:^{
             }]show];
         }
             break;
+            
         case 3:
         {
             [[[KSAlertView alloc] initWithImage:[UIImage imageNamed:@"logo"] closeBtn:[UIImage imageNamed:@"close"] clickImageBlock:^{
             }]show];
         }
             break;
-            
             
         case 4:
         {
@@ -81,10 +82,11 @@
             
         case 5:
         {
-            [[[KSAlertView alloc] initWithGif:@"loading" endBlock:^{
-            }]show];
+            [[[KSAlertView new] initWithGif:@"loading" andIsAutoHidden:true] show];
+            //在合适的位置设置diss
         }
             break;
+            
         case 6:
         {
             [[[KSAlertView alloc] initWithText:@"111" showTime:1.0 endBlock:^{
@@ -95,12 +97,15 @@
         case 7:
         {
             [[[KSAlertView alloc] initWithArratList:[NSMutableArray arrayWithObjects:@"111",@"222",@"333",@"444",@"555",nil] cancelBtn:@"取消" otherBtn:@"确定" clickBlock:^(NSInteger index) {
+                NSLog(@"选中了-%ld",(long)index);
             }]show];
         }
             break;
+            
         case 8:
         {
             [[[KSAlertView alloc] initWithArratList:[NSMutableArray arrayWithObjects:@"111",@"222",@"333",@"444",@"555",nil] cancelBtn:@"取消" otherBtn:@"确定" clickArrBlock:^(NSMutableArray *arr) {
+                NSLog(@"选中了-%@",arr);
             }]show];
         }
             break;
