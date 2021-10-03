@@ -5,3 +5,6 @@
   >pod 'KSAlertView'
 ## 代码集成：
   直接下载代码将KSAlertView和UIImage+GIF文件拖入工程
+  
+## 效果图
+![](https://github.com/Turboks/KSAlertView/blob/main/alert.gif)
